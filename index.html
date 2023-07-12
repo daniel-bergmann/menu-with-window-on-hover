@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>simple menu with hover window effect</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      ul {
+        list-style: none;
+        background: black;
+      }
+
+      ul li {
+        display: inline-block;
+        position: relative;
+      }
+
+      ul li a {
+        display: block;
+        padding: 20px 25px;
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        text-align: center;
+      }
+
+      ul li ul.dropdown li {
+        display: block;
+      }
+
+      ul li ul.dropdown {
+        width: 100%;
+        background: black;
+        border-top: none;
+        position: absolute;
+        z-index: 9999;
+        display: none;
+      }
+
+      ul li a:hover {
+        background: white;
+        color: black;
+      }
+
+      ul li:hover ul.dropdown {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><a href="#">Test 1</a></li>
+      <li><a href="#">Test 2</a></li>
+      <li>
+        <a href="#"
+          >Test 3
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="15"
+            height="15"
+            fill="#fff"
+            viewBox="0 0 256 256"
+          >
+            <path
+              d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"
+            ></path></svg
+        ></a>
+        <ul class="dropdown">
+          <li><a href="#">Test a</a></li>
+          <li><a href="#">Test b</a></li>
+          <li><a href="#">Test c</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Test 4</a></li>
+    </ul>
+  </body>
+</html>
